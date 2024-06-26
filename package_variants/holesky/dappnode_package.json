@@ -1,0 +1,32 @@
+{
+  "name": "holesky-nethermind.dnp.dappnode.eth",
+  "version": "1.0.8",
+  "exposable": [
+    {
+      "name": "Holesky Nethermind JSON RPC",
+      "description": "JSON RPC endpoint for Nethermind Ethereum holesky testnet",
+      "serviceName": "nethermind",
+      "port": 8545
+    },
+    {
+      "name": "Holesky Nethermind JSON RPC (WS)",
+      "description": "JSON RPC WebSocket endpoint for Nethermind Ethereum holesky testnet",
+      "serviceName": "nethermind",
+      "port": 8546
+    }
+  ],
+  "links": {
+    "api": "http://holesky-nethermind.dappnode:8545",
+    "apiEngine": "http://holesky-nethermind.dappnode:8551",
+    "homepage": "https://github.com/dappnode/DAppNodePackage-nethermind-generic#readme"
+  },
+  "requirements": {
+    "minimumDappnodeVersion": "0.2.64"
+  },
+  "globalEnvs": [
+    {
+      "envs": ["CONSENSUS_CLIENT_HOLESKY"],
+      "services": ["nethermind"]
+    }
+  ]
+}

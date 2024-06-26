@@ -1,0 +1,10 @@
+version: "3.5"
+services:
+  nethermind:
+    build:
+      args:
+        NETWORK: mainnet
+    ports:
+      - 30404:30404/udp
+      - 30404:30404/tcp
+    image: nethermind.nethermind.public.dappnode.eth:1.0.51

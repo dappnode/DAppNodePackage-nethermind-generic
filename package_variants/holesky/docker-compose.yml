@@ -1,0 +1,10 @@
+version: "3.5"
+services:
+  nethermind:
+    build:
+      args:
+        NETWORK: holesky
+    ports:
+      - 31804:31804/udp
+      - 31804:31804/tcp
+    image: nethermind.nethermind.public.dappnode.eth:1.0.51

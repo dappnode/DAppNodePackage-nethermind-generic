@@ -1,0 +1,10 @@
+version: "3.5"
+services:
+  nethermind:
+    build:
+      args:
+        NETWORK: gnosis
+    ports:
+      - 31404:31404/udp
+      - 31404:31404/tcp
+    image: nethermind.nethermind-xdai.dnp.dappnode.eth:1.0.45

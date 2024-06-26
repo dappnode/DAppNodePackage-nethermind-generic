@@ -1,0 +1,32 @@
+{
+  "name": "nethermind-xdai.public.dappnode.eth",
+  "version": "1.0.45",
+  "exposable": [
+    {
+      "name": "Gnosis Nethermind JSON RPC",
+      "description": "JSON RPC endpoint for Nethermind in Gnosis network",
+      "serviceName": "nethermind",
+      "port": 8545
+    },
+    {
+      "name": "Gnosis Nethermind JSON RPC (WS)",
+      "description": "JSON RPC WebSocket endpoint for Nethermind in Gnosis network",
+      "serviceName": "nethermind",
+      "port": 8546
+    }
+  ],
+  "links": {
+    "api": "http://nethermind-xdai.dappnode:8545",
+    "apiEngine": "http://nethermind-xdai.dappnode:8551",
+    "homepage": "https://github.com/dappnode/DAppNodePackage-nethermind-generic#readme"
+  },
+  "requirements": {
+    "minimumDappnodeVersion": "0.2.64"
+  },
+  "globalEnvs": [
+    {
+      "envs": ["CONSENSUS_CLIENT_GNOSIS"],
+      "services": ["nethermind"]
+    }
+  ]
+}
