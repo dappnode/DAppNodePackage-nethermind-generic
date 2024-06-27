@@ -4,6 +4,7 @@ services:
     build:
       args:
         NETWORK: gnosis
+        P2P_PORT: 31404
     ports:
       - 31404:31404/udp
       - 31404:31404/tcp

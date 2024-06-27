@@ -4,6 +4,7 @@ services:
     build:
       args:
         NETWORK: mainnet
+        P2P_PORT: 30404
     ports:
       - 30404:30404/udp
       - 30404:30404/tcp
