@@ -1,6 +1,6 @@
 #!/bin/sh
 
-SUPPORTED_NETWORKS="holesky mainnet"
+SUPPORTED_NETWORKS="holesky mainnet gnosis"
 
 # shellcheck disable=SC1091
 . /etc/profile
