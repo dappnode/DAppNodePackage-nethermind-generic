@@ -6,6 +6,11 @@
       "repo": "NethermindEth/nethermind",
       "version": "1.27.0",
       "arg": "UPSTREAM_VERSION"
+    },
+    {
+      "repo": "dappnode/staker-package-scripts",
+      "version": "v0.1.0",
+      "arg": "STAKER_SCRIPTS_VERSION"
     }
   ],
   "shortDescription": "Nethermind Ethereum client",

@@ -5,6 +5,7 @@ services:
       context: nethermind
       args:
         UPSTREAM_VERSION: 1.27.0
+        STAKER_SCRIPTS_VERSION: v0.1.0
     restart: unless-stopped
     security_opt:
       - seccomp:unconfined
