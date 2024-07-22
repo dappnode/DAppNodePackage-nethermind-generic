@@ -187,5 +187,11 @@
       "http://ipfs.dappnode.io": "Wed, 17 Feb 2021 16:09:20 GMT"
     },
     "link": "https://dappnode.github.io/sdk-publish/?r=nethermind.public.dappnode.eth&v=1.0.3&h=%2Fipfs%2FQmZWz5xfqQjSkkTp6QSiC3mDLsd37frFut471E6AJjDLKC"
+  },
+  "1.0.8": {
+    "hash": "/ipfs/QmRK1h9NVEq9hKM2jMKb15J6WGW3YW37rURZBfjzsX8t5R",
+    "uploadedTo": {
+      "dappnode": "Mon, 22 Jul 2024 15:49:16 GMT"
+    }
   }
 }

@@ -6,6 +6,7 @@ services:
       args:
         UPSTREAM_VERSION: 1.27.0
         STAKER_SCRIPTS_VERSION: v0.1.0
+        DATA_DIR: /data
     restart: unless-stopped
     security_opt:
       - seccomp:unconfined
