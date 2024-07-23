@@ -1,10 +1,10 @@
 {
   "name": "nethermind.public.dappnode.eth",
-  "version": "1.0.51",
+  "version": "1.0.52",
   "upstream": [
     {
       "repo": "NethermindEth/nethermind",
-      "version": "1.27.0",
+      "version": "1.27.1",
       "arg": "UPSTREAM_VERSION"
     },
     {
