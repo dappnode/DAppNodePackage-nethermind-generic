@@ -12,12 +12,11 @@ ENV NETHERMIND_JSONRPCCONFIG_ENABLED=true \
     NETHERMIND_INITCONFIG_LOGDIRECTORY=${DATA_DIR}/logs \
     NETHERMIND_HEALTHCHECKSCONFIG_ENABLED=true \
     P2P_PORT=${P2P_PORT} \
-    SECURITY_PATH=/security \
+    JWT_PATH=/jwtsecret.hex \
     STAKER_SCRIPTS_URL=https://github.com/dappnode/staker-package-scripts/releases/download/${STAKER_SCRIPTS_VERSION}
 
 ADD ${STAKER_SCRIPTS_URL}/execution_tools.sh /etc/profile.d/
 
-COPY /security ${SECURITY_PATH}
 COPY entrypoint.sh /usr/local/bin/entrypoint.sh
 
 RUN apt-get update && apt-get --yes install curl && \
