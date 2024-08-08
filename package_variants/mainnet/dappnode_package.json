@@ -23,10 +23,11 @@
   "requirements": {
     "minimumDappnodeVersion": "0.2.64"
   },
-  "globalEnvs": [
-    {
-      "envs": ["CONSENSUS_CLIENT_MAINNET"],
-      "services": ["nethermind"]
-    }
-  ]
+  "optionalDependencies": {
+    "lighthouse.dnp.dappnode.eth": ">=1.0.12",
+    "prysm.dnp.dappnode.eth": ">=3.0.16",
+    "teku.dnp.dappnode.eth": ">=2.0.13",
+    "nimbus.dnp.dappnode.eth": ">=1.0.14",
+    "lodestar.dnp.dappnode.eth": ">=0.1.18"
+  }
 }

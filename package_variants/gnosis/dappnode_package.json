@@ -23,10 +23,10 @@
   "requirements": {
     "minimumDappnodeVersion": "0.2.64"
   },
-  "globalEnvs": [
-    {
-      "envs": ["CONSENSUS_CLIENT_GNOSIS"],
-      "services": ["nethermind"]
-    }
-  ]
+  "optionalDependencies": {
+    "lighthouse-gnosis.dnp.dappnode.eth": ">=0.1.13",
+    "teku-gnosis.dnp.dappnode.eth": ">=0.1.13",
+    "nimbus-gnosis.dnp.dappnode.eth": ">=0.1.1",
+    "lodestar-gnosis.dnp.dappnode.eth": ">=0.1.15"
+  }
 }
