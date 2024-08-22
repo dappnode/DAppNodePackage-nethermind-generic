@@ -15,4 +15,7 @@ exec /nethermind/nethermind \
   --config "${NETWORK}" \
   --JsonRpc.JwtSecretFile="${JWT_PATH}" \
   --Network.DiscoveryPort="${P2P_PORT}" \
+  --Metrics.Enabled=true \
+  --Metrics.ExposePort=6060 \
+  --Metrics.IntervalSeconds=15 \
   --Network.P2PPort="${P2P_PORT}" ${EXTRA_OPTS}
