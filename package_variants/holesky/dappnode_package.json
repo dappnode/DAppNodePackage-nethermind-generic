@@ -20,9 +20,6 @@
     "apiEngine": "http://holesky-nethermind.dappnode:8551",
     "homepage": "https://github.com/dappnode/DAppNodePackage-nethermind-generic#readme"
   },
-  "requirements": {
-    "minimumDappnodeVersion": "0.2.64"
-  },
   "optionalDependencies": {
     "lighthouse-holesky.dnp.dappnode.eth": ">=0.1.3",
     "prysm-holesky.dnp.dappnode.eth": ">=0.1.4",

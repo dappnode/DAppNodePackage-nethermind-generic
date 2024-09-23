@@ -28,5 +28,7 @@
     "url": "https://github.com/dappnode/DAppNodePackage-nethermind-generic/issues"
   },
   "license": "GPL-3.0",
-  "minimumDappnodeVersion": "0.2.95"
+  "requirements": {
+    "minimumDappnodeVersion": "0.2.95"
+  }
 }

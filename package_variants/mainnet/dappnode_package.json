@@ -20,9 +20,6 @@
     "apiEngine": "http://nethermind.public.dappnode:8551",
     "homepage": "https://github.com/dappnode/DAppNodePackage-nethermind-generic#readme"
   },
-  "requirements": {
-    "minimumDappnodeVersion": "0.2.64"
-  },
   "optionalDependencies": {
     "lighthouse.dnp.dappnode.eth": ">=1.0.12",
     "prysm.dnp.dappnode.eth": ">=3.0.16",
