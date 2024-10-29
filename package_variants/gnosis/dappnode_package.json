@@ -1,5 +1,5 @@
 {
-  "name": "nethermind-xdai.public.dappnode.eth",
+  "name": "nethermind-xdai.dnp.dappnode.eth",
   "version": "0.1.0",
   "exposable": [
     {
