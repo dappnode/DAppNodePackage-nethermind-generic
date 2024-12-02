@@ -1,6 +1,6 @@
 {
   "name": "nethermind.public.dappnode.eth",
-  "version": "1.0.55",
+  "version": "1.0.56",
   "exposable": [
     {
       "name": "Nethermind JSON RPC",
@@ -25,6 +25,6 @@
     "lighthouse.dnp.dappnode.eth": ">=1.0.13",
     "nimbus.dnp.dappnode.eth": ">=0.1.14",
     "lodestar.dnp.dappnode.eth": ">=0.1.22",
-    "teku.dnp.dappnode.eth": ">=2.0.13",
+    "teku.dnp.dappnode.eth": ">=2.0.13"
   }
 }
