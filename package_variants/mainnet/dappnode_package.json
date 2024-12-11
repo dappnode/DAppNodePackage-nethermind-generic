@@ -19,12 +19,5 @@
     "api": "http://nethermind.public.dappnode:8545",
     "apiEngine": "http://nethermind.public.dappnode:8551",
     "homepage": "https://github.com/dappnode/DAppNodePackage-nethermind-generic#readme"
-  },
-  "optionalDependencies": {
-    "prysm.dnp.dappnode.eth": ">=3.0.16",
-    "lighthouse.dnp.dappnode.eth": ">=1.0.13",
-    "nimbus.dnp.dappnode.eth": ">=0.1.14",
-    "lodestar.dnp.dappnode.eth": ">=0.1.22",
-    "teku.dnp.dappnode.eth": ">=2.0.13",
   }
 }
