@@ -19,11 +19,5 @@
     "api": "http://nethermind-xdai.dappnode:8545",
     "apiEngine": "http://nethermind-xdai.dappnode:8551",
     "homepage": "https://github.com/dappnode/DAppNodePackage-nethermind-generic#readme"
-  },
-  "optionalDependencies": {
-    "lighthouse-gnosis.dnp.dappnode.eth": ">=0.1.13",
-    "teku-gnosis.dnp.dappnode.eth": ">=0.1.13",
-    "nimbus-gnosis.dnp.dappnode.eth": ">=0.1.1",
-    "lodestar-gnosis.dnp.dappnode.eth": ">=0.1.17"
   }
 }
