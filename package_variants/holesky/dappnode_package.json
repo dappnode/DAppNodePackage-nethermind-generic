@@ -1,6 +1,6 @@
 {
   "name": "holesky-nethermind.dnp.dappnode.eth",
-  "version": "0.1.15",
+  "version": "0.1.16",
   "exposable": [
     {
       "name": "Holesky Nethermind JSON RPC",
