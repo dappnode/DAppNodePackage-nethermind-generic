@@ -1,0 +1,11 @@
+version: "3.5"
+services:
+  nethermind:
+    build:
+      args:
+        NETWORK: hoodi
+        P2P_PORT: 31904
+    ports:
+      - 31904:31904/udp
+      - 31904:31904/tcp
+    image: nethermind.nethermind.public.dappnode.eth:1.0.51
