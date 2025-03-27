@@ -9,7 +9,7 @@
     },
     {
       "repo": "dappnode/staker-package-scripts",
-      "version": "0.1.2",
+      "version": "v0.1.2",
       "arg": "STAKER_SCRIPTS_VERSION"
     }
   ],
