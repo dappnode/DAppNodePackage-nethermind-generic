@@ -4,7 +4,7 @@ services:
     build:
       context: nethermind
       args:
-        UPSTREAM_VERSION: 1.31.10
+        UPSTREAM_VERSION: 1.31.11
         STAKER_SCRIPTS_VERSION: v0.1.2
         DATA_DIR: /data
     restart: unless-stopped
