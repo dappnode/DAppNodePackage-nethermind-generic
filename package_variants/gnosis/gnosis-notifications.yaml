@@ -1,8 +1,8 @@
 endpoints:
-  - name: "Mainnet ETH Node Syncing Check"
+  - name: "Gnosis ETH Node Syncing Check"
     enabled: true
-    group: "ethereum"
-    url: "http://nethermind.dappnode:8545"
+    group: "gnosis"
+    url: "http://gnosis-nethermind.dappnode:8545"
     method: "POST"
     body: |
       {"jsonrpc": "2.0", "id": 1, "method": "eth_syncing", "params": []}
@@ -12,22 +12,22 @@ endpoints:
     conditions:
       - "[BODY].result == false"
     definition:
-      title: "Mainnet ETH Node Synced Check"
-      description: "Check if the Mainnet ETH Node is synced. You will receive a notification if the node is syncing and another one when it is synced."
-    correlationId: "nethermind-eth-syncing"
+      title: "Gnosis Node Synced Check"
+      description: "Check if the Gnosis ETH Node is synced. You will receive a notification if the node is syncing and another one when it is synced."
+    correlationId: "gnosis-nethermind-eth-syncing"
     isBanner: false
     priority: "medium"
     alerts:
       - type: custom
         enabled: true
-        description: "Nethermind Ethereum Node syncing"
+        description: "Nethermind Gnosis Node syncing"
         failure-threshold: 4
         success-threshold: 1
         send-on-resolved: true
-  - name: "Mainnet ETH Node Peers count Check"
+  - name: "Gnosis Node Peers count Check"
     enabled: true
-    group: "ethereum"
-    url: "http://nethermind.dappnode:8545"
+    group: "gnosis"
+    url: "http://gnosis-nethermind.dappnode:8545"
     method: "POST"
     body: |
       {"jsonrpc": "2.0", "id": 1, "method": "net_peerCount", "params": []}
@@ -37,9 +37,9 @@ endpoints:
     conditions:
       - "[BODY].result >= 10"
     definition:
-      title: "Mainnet ETH Node Peers count Check"
-      description: "Check if the Mainnet ETH Node has a minimum of peers. You will receive a notification if the node has less than the peers defined for 5 minutes and another one when it has more than the peers defined."
-    correlationId: "nethermind-eth-peers"
+      title: "Gnosis Node Peers count Check"
+      description: "Check if the Gnosis Node has a minimum of peers. You will receive a notification if the node has less than the peers defined for 5 minutes and another one when it has more than the peers defined."
+    correlationId: "gnosis-nethermind-eth-peers"
     isBanner: false
     priority: "low"
     metric:
@@ -49,7 +49,7 @@ endpoints:
     alerts:
       - type: custom
         enabled: true
-        description: "Nethermind Ethereum Node peers count"
+        description: "Nethermind Gnosis Node peers count"
         failure-threshold: 10
         success-threshold: 1
         send-on-resolved: true
