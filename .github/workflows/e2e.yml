@@ -1,0 +1,50 @@
+name: "End to End Tests for Nethermind using self-hosted runner"
+
+on:
+  workflow_dispatch:
+  push:
+
+jobs:
+  deploy:
+    runs-on: self-hosted
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      
+      - name: Setup Go
+        uses: actions/setup-go@v4
+        with:
+          go-version: "1.24.3"
+
+      - name: Build DAppNode Package
+        run: |
+          npx @dappnode/dappnodesdk build --provider=remote --variant=hoodi
+
+      - name: Extract IPFS Hash
+        id: extract_ipfs
+        run: |
+          # Use jq to get the hash from the generated releases.json.
+          ipfs_hash=$(jq -r '.[].hash' package_variants/hoodi/releases.json)
+          echo "IPFS hash: $ipfs_hash"
+          # Save the hash as an environment variable for later steps.
+          echo "IPFS_HASH=$ipfs_hash" >> $GITHUB_ENV
+
+      - name: Check DAppManager Ping
+        id: ping_dappmanager
+        run: |
+          # Ping the DAppManager endpoint and check for HTTP 200
+          code=$(curl -s -o /dev/null -w "%{http_code}" http://172.33.1.7:7000/ping)
+          if [ "$code" -ne 200 ]; then
+            echo "dappmanager is not running with env TEST=true and therefore the test api is not running"
+            exit 1
+          fi
+
+      - name: Run staker client test sdk
+        run: |
+          cd /home/pablo/staker-test-util
+          LOG_LEVEL=DEBUG go run cmd/main.go --ipfs-gateway-url=https://gateway-dev.ipfs.dappnode.io --tropidatooor-url=http://localhost:3000 --ipfs-hash=${{ env.IPFS_HASH }}
