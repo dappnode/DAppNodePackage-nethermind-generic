@@ -1,6 +1,6 @@
 {
   "name": "hoodi-nethermind.dnp.dappnode.eth",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "exposable": [
     {
       "name": "hoodi Nethermind JSON RPC",
