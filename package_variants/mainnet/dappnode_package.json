@@ -1,6 +1,6 @@
 {
   "name": "nethermind.public.dappnode.eth",
-  "version": "1.0.66",
+  "version": "1.0.67",
   "exposable": [
     {
       "name": "Nethermind JSON RPC",
