@@ -1,6 +1,6 @@
 {
   "name": "nethermind-xdai.dnp.dappnode.eth",
-  "version": "1.0.62",
+  "version": "1.0.63",
   "exposable": [
     {
       "name": "Gnosis Nethermind JSON RPC",
