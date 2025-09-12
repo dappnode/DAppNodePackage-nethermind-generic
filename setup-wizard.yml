@@ -24,7 +24,7 @@ fields:
 
       **Advanced** (NOT Recommended): You will be able to select different
       parameters and configure them at will. Please refer to the
-      [documentation](https://nethermind.readthedocs.io/en/latest/configuration.html)
+      [documentation](https://docs.nethermind.io/fundamentals/configuration)
       for further explanation.
 
 
