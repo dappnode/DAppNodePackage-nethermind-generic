@@ -2,7 +2,7 @@ endpoints:
   - name: "Mainnet ETH Node Syncing Check"
     enabled: true
     group: "ethereum"
-    url: "http://nethermind.dappnode:8545"
+    url: "http://nethermind.public.dappnode:8545"
     method: "POST"
     body: |
       {"jsonrpc": "2.0", "id": 1, "method": "eth_syncing", "params": []}
@@ -27,7 +27,7 @@ endpoints:
   - name: "Mainnet ETH Node Peers count Check"
     enabled: true
     group: "ethereum"
-    url: "http://nethermind.dappnode:8545"
+    url: "http://nethermind.public.dappnode:8545"
     method: "POST"
     body: |
       {"jsonrpc": "2.0", "id": 1, "method": "net_peerCount", "params": []}
