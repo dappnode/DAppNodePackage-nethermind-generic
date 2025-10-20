@@ -2,7 +2,8 @@
   "name": "nethermind-xdai.dnp.dappnode.eth",
   "version": "1.0.68",
   "requirements": {
-    "minimumDappnodeVersion": "0.3.11"
+    "minimumDappnodeVersion": "0.3.12",
+    "notInstalledPackages": ["nimbus-gnosis.dnp.dappnode.eth"]
   },
   "exposable": [
     {
