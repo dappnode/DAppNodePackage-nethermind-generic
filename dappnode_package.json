@@ -27,7 +27,7 @@
     {
       "arg": "UPSTREAM_VERSION",
       "repo": "NethermindEth/nethermind",
-      "version": "1.39.0"
+      "version": "1.39.1"
     },
     {
       "arg": "STAKER_SCRIPTS_VERSION",
