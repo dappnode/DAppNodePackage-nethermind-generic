@@ -8,11 +8,27 @@ echo "${JWT_SECRET}" >"${JWT_PATH}"
 
 post_jwt_to_dappmanager "${JWT_PATH}"
 
-echo "[INFO - entrypoint] Starting Nethermind client for network: ${NETWORK}"
+CONFIG="${NETWORK}"
+case "${MODE:-normal}" in
+  normal)
+    ;;
+  archive)
+    CONFIG="${NETWORK}_archive"
+    ;;
+  custom)
+    CONFIG="/data/custom.cfg"
+    ;;
+  *)
+    echo "[ERROR - entrypoint] Unsupported mode: ${MODE}" >&2
+    exit 1
+    ;;
+esac
+
+echo "[INFO - entrypoint] Starting Nethermind client for network: ${NETWORK}, config: ${CONFIG}"
 
 # shellcheck disable=SC2086
 exec /nethermind/nethermind \
-  --config "${NETWORK}" \
+  --config "${CONFIG}" \
   --JsonRpc.JwtSecretFile="${JWT_PATH}" \
   --Network.DiscoveryPort="${P2P_PORT}" \
   --Metrics.Enabled=true \
