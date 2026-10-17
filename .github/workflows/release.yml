@@ -8,6 +8,11 @@ on:
         required: true
         type: choice
         options: [lodestar, teku, prysm, nimbus, lighthouse]
+      skip_tests:
+        description: "Skip tests and publish directly after build"
+        required: false
+        type: boolean
+        default: false
   push:
     branches:
       - "main"
@@ -20,4 +25,5 @@ jobs:
     with:
       package_variant: "hoodi"
       consensus_client: ${{ inputs.consensus_client || '' }}
+      skip_tests: ${{ inputs.skip_tests || false }}
     secrets: inherit
