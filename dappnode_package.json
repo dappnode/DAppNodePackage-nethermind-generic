@@ -13,7 +13,6 @@
   "chain": "ethereum",
   "description": "Nethermind - The world's fastest Ethereum .NET Client and P2P Data Marketplace for the decentralised future\nOur flagship .NET Core-based Ethereum client is all about performance and flexibility. We have built a lean, stable and feature-rich gateway to allow anyone, anywhere, to take part in the decentralised future.",
   "license": "GPL-3.0",
-  "name": "nethermind.public.dappnode.eth",
   "repository": {
     "type": "git",
     "url": "https://github.com/dappnode/DAppNodePackage-nethermind-generic.git"
@@ -34,6 +33,5 @@
       "repo": "dappnode/staker-package-scripts",
       "version": "v0.1.2"
     }
-  ],
-  "version": "1.0.53"
+  ]
 }
